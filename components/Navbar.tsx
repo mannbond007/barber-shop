@@ -114,7 +114,7 @@ const Navbar = () => {
 
             {/* Menu Panel */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-linear-to-br from-black via-gray-900 to-black z-50 md:hidden shadow-2xl"
+              className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-br from-black via-[#0f0a05] to-[#1a1410] z-50 md:hidden shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

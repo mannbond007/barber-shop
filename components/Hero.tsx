@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black">
+    <section className="relative py-24 sm:py-20 min-h-screen w-full overflow-hidden bg-black">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
@@ -84,7 +84,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-12 grid w-full max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3"
+          className="mt-16 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3"
         >
           {[
             { value: "500+", label: "Happy Clients", icon: Users },
@@ -93,15 +93,17 @@ export default function Hero() {
           ].map(({ value, label, icon: Icon }) => (
             <div
               key={label}
-              className="rounded-2xl border border-white/15 bg-white/10 px-6 py-5 backdrop-blur-md text-center"
+              className="rounded-2xl border border-[#D4AF37]/30 bg-gradient-to-br from-white/8 to-white/5 px-8 py-8 backdrop-blur-md flex flex-col items-center hover:border-[#D4AF37]/50 transition duration-300"
             >
-              <div className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37]">
-                <Icon className="h-5 w-5" />
+              <div className="flex items-center gap-4 mb-6 w-full justify-center">
+                <div className="h-16 w-16 inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-[#D4AF37]/25 to-[#D4AF37]/10 text-[#D4AF37] shadow-[0_8px_24px_rgba(212,175,55,0.25)] border border-[#D4AF37]/30">
+                  <Icon className="h-8 w-8" />
+                </div>
+                <div className="text-4xl font-bold text-[#D4AF37]">{value}</div>
               </div>
-              <div className="text-2xl font-bold text-[#D4AF37] mb-1">
-                {value}
+              <div className="text-center text-sm tracking-widest text-gray-300 uppercase font-medium">
+                {label}
               </div>
-              <div className="text-sm tracking-wide text-gray-300">{label}</div>
             </div>
           ))}
         </motion.div>
